@@ -1,0 +1,24 @@
+{
+  "name": "apm-start",
+  "version": "1.0.0",
+  "description": "Мой пробный проект",
+  "main": "index.html",
+  "scripts": {
+    "start": "lite-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Grishin Ivan",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.3",
+    "angular-route": "^1.5.3",
+    "jquery": "^2.2.3",
+    "office-ui-fabric": "^2.3.0"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "lite": "^3.0.9",
+    "lite-server": "^2.2.0"
+  }
+}

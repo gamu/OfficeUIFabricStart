@@ -1,0 +1,110 @@
+<DOCTYPE html>
+<html>
+    <head>
+        <title>Ангулар блин</title>  
+        <link rel="stylesheet" href="style/fabric.css">
+        <link rel="stylesheet" href="style/fabric.components.css">
+        <script src="script/jquery.js"></script>
+        <script src="script/jquery.fabric.js"></script>
+        <script src="script/Jquery.SearchBox.js"></script>
+        <script src="script/Jquery.Pivot.js"></script>
+        <script src="script/Jquery.Callout.js"></script>
+        <script src="script/messageBanner.js"></script>
+        <script src="script/script.js"></script>
+    </head>
+    <body ng-app="apmStart">
+        <h1>Проверка</h1>
+        <div class="ms-Grid">
+            <div class="ms-Grid-row">
+                <div class="ms-Grid-col ms-u-sm6 ms-u-md4 ms-u-lg2">
+                    <div class="ms-SearchBox">
+                        <input class="ms-SearchBox-field" type="text"> 
+                        <label class="ms-SearchBox-label"><i class="ms-SearchBox-icon ms-Icon ms-Icon--search"></i>Поиск</label> 
+                        <button class="ms-SearchBox-closeButton"><i class="ms-Icon ms-Icon--x"></i></button>
+                    </div>
+                </div>
+                <div class="ms-Grid-col ms-u-sm6 ms-u-md8 ms-u-lg10">
+                    <div>
+                        <ul class="ms-Pivot ms-Pivot--large">
+                            <li class="ms-Pivot-link is-selected" Id="pivot1">Входящие заявки</li>
+                            <li class="ms-Pivot-link" Id="pivot2">Взято в обработку мной</li>
+                            <li class="ms-Pivot-link" Id="pivot3">Созданные мной</li>
+                            <li class="ms-Pivot-link ms-Pivot-link--overflow"><i class="ms-Pivot-ellipsis ms-Icon ms-Icon--ellipsis"></i></li>
+                        </ul>
+                    </div>
+                    <ng-view></ng-view>                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="ms-Callout ms-Callout--OOBE ms-Callout--arrowTop" for="pivot1">
+            <div class="ms-Callout-main">
+                <div class="ms-Callout-header">
+                    <p class="ms-Callout-title">Входящие заявки</p>
+                </div>
+                    <div class="ms-Callout-inner">
+                        <div class="ms-Callout-content">
+                            <p class="ms-Callout-subText">Новых заявок +4</p>
+                        </div>
+                        <div class="ms-Callout-actions">
+                            <button class="ms-Callout-button ms-Button ms-Button--primary"> 
+                                <span class="ms-Button-label">More</span> 
+                                <span class="ms-Button-description">Description of the action this button takes</span> 
+                            </button> 
+                            <button class="ms-Callout-button ms-Button"> 
+                                <span class="ms-Button-label">Got it</span> 
+                                <span class="ms-Button-description">Description of the action this button takes</span> 
+                            </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="ms-Callout ms-Callout--OOBE ms-Callout--arrowTop" for="pivot2">
+            <div class="ms-Callout-main">
+                <div class="ms-Callout-header">
+                    <p class="ms-Callout-title">All of your favorite people</p>
+                </div>
+                    <div class="ms-Callout-inner">
+                        <div class="ms-Callout-content">
+                            <p class="ms-Callout-subText">People automatically puts together all of the people you care most about in one place.</p>
+                        </div>
+                        <div class="ms-Callout-actions">
+                            <button class="ms-Callout-button ms-Button ms-Button--primary"> 
+                                <span class="ms-Button-label">More</span> 
+                                <span class="ms-Button-description">Description of the action this button takes</span> 
+                            </button> 
+                            <button class="ms-Callout-button ms-Button"> 
+                                <span class="ms-Button-label">Got it</span> 
+                                <span class="ms-Button-description">Description of the action this button takes</span> 
+                            </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="ms-Callout ms-Callout--peek ms-Callout--arrowTop " for="pivot3"> 
+            <div class="ms-Callout-main">
+                <div class="ms-Callout-header">
+                    <strong class="ms-fontColor-orange ms-font-l">Новых заявок 2 </strong>
+                </div>
+                <button class="ms-Callout-close"> <i class="ms-Icon ms-Icon--x"></i> </button>
+                    <div class="ms-Callout-inner">
+                    <div class="ms-Callout-actions">
+                        <button class="ms-Callout-button ms-Button"> 
+                            <span class="ms-Button-label" onclick="alert(1)">Подробнее</span> 
+                            <span class="ms-Button-description">Description of the action this button takes</span> 
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+               
+        <script src="script/angular.js" ></script>
+        <script src="script/angular-route.js" ></script> 
+        <script src="app/main.js" ></script>
+        <script src="app/repositories.js" ></script>
+        <script src="app/ctrollers.js" ></script>
+    </body>
+</html>
